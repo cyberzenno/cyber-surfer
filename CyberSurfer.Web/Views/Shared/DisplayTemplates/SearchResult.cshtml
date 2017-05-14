@@ -1,0 +1,21 @@
+@model CyberSurfer.Data.Interfaces.ISearchResult
+@{
+    Layout = null;
+
+    var decodedTitle = HttpUtility.HtmlDecode(Model.Title);
+
+}
+<div class="search-result">
+    <div>
+        <span class="id label label-info">@Model.Id</span>
+        <span class="title">@Html.Raw(decodedTitle)</span>
+    </div>
+
+    <div class="url">
+        <a href="@Model.Url" target="_blank">@Model.Url</a>
+    </div>
+    <div class="summary">
+        @Html.DisplayFor(modelItem => Model.Summary)
+    </div>
+</div>
+

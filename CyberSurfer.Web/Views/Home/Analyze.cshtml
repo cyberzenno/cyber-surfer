@@ -1,0 +1,14 @@
+@model CyberSurfer.Web.Models.SearchAnalysisViewModel
+@{
+    ViewBag.Title = "Analyze";
+}
+
+<h2>Analyze</h2>
+
+@foreach (var item in Model.WordsOccurences)
+{
+    <div class="row">
+        <div class="col-md-2">@item.Key</div>
+        <div class="col-md-2">@item.Value</div>
+    </div>
+}

@@ -1,0 +1,17 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="actions">
+    <div class="panel panel-default">
+        @*<div class="panel-heading panel-sm">Actions</div>*@
+        <div class="panel-body panel-sm">
+            @Html.ActionLink("Back to search", "Index", "Home", null, new { @class = "btn btn-default btn-xs" })
+            <div class="pull-right">
+                @Html.ActionLink("Analyze", "Analyze", "Home", null, new { @class = "btn btn-warning btn-xs" })
+                @Html.ActionLink("Save as Csv", "SaveToCsv", "Home", null, new { @class = "btn btn-primary btn-xs" })
+            </div>
+        </div>
+    </div>
+</div>
+

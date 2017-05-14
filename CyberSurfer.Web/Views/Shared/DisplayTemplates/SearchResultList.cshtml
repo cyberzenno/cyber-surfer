@@ -1,0 +1,10 @@
+@model IEnumerable<CyberSurfer.Data.Interfaces.ISearchResult>
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+    @Html.DisplayForModel()
+}
+

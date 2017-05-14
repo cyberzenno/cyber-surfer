@@ -1,0 +1,34 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSurfer.Web", "CyberSurfer.Web\CyberSurfer.Web.csproj", "{D8B1CEDD-4BD2-4A78-AC92-FF0BD250F76A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSurfer.Data", "CyberSurfer.Data\CyberSurfer.Data.csproj", "{8A9B691B-B280-4060-ADCA-6C1A9A6CDA69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberSurfer.UnitTests", "CyberSurfer.UnitTests\CyberSurfer.UnitTests.csproj", "{562BD6E2-4CA9-40A5-880B-7E59F43C7E5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8B1CEDD-4BD2-4A78-AC92-FF0BD250F76A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B1CEDD-4BD2-4A78-AC92-FF0BD250F76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B1CEDD-4BD2-4A78-AC92-FF0BD250F76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B1CEDD-4BD2-4A78-AC92-FF0BD250F76A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A9B691B-B280-4060-ADCA-6C1A9A6CDA69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A9B691B-B280-4060-ADCA-6C1A9A6CDA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A9B691B-B280-4060-ADCA-6C1A9A6CDA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A9B691B-B280-4060-ADCA-6C1A9A6CDA69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562BD6E2-4CA9-40A5-880B-7E59F43C7E5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562BD6E2-4CA9-40A5-880B-7E59F43C7E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562BD6E2-4CA9-40A5-880B-7E59F43C7E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562BD6E2-4CA9-40A5-880B-7E59F43C7E5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
