@@ -5,7 +5,6 @@ The test was also asking to add a small analysis functionality that counts the m
 
 I really liked the idea and I tried to make it extensible for adding also other search engines. Then I thought about a fancy name and here it is **Cyber Surfer**.
 
-### [Live Demo](http://core.cyberzenno.com/cyber-surfer/)
 ### [Related Post](https://cyberzenno.wordpress.com/2017/01/31/cyber-surfer/)
 
 At the moment I'm working on displaying ther results with a Word Cloud.
