@@ -47,6 +47,13 @@ namespace CyberSurfer.Web.Controllers
             return View(viewModel);
         }
 
+        public ActionResult SearchDebug(string search)
+        {
+            var result = bingSearchService.SearchDebug(search);
+
+            return Content(result);
+        }
+
         public ActionResult Analyze()
         {
             var lastSearch = GetLastSearch();

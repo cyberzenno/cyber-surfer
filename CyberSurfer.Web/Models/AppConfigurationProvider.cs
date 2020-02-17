@@ -21,12 +21,12 @@ namespace CyberSurfer.Web.Models
 
         public int VirtualPageSize
         {
-            get { return 30; }
+            get { return 10; }
         }
 
         public int MaxResults
         {
-            get { return 200; }
+            get { return 40; }
         }
     }
 }

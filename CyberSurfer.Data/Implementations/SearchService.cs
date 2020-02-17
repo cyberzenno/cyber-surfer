@@ -1,5 +1,4 @@
 using CyberSurfer.Data.Interfaces;
-using CyberSurfer.Data.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,19 +25,33 @@ namespace CyberSurfer.Data.Implementations
 
         public IEnumerable<ISearchResult> Search(string search, int page)
         {
-            //TODO: implement error handling logic
+            try
+            {
+                //Build search url
+                var searchUrl = searchUrlBuilder.BuildSearchUrl(search, page);
 
-            //Build search url
-            var searchUrl = searchUrlBuilder.BuildSearchUrl(search, page);
+                //Get the plane Html result
+                var searchHtmlResult = searchWebClient.Search(searchUrl);
 
-            //Get the plane Html result
-            var searchHtmlResult = searchWebClient.Search(searchUrl);
+                //Parse html and convert it to Model
+                IEnumerable<ISearchResult> searchResults = searchParser.Parse(searchHtmlResult);
 
-            //Parse html and convert it to Model
-            IEnumerable<ISearchResult> searchResults = searchParser.Parse(searchHtmlResult);
+                SetIncrementalId(searchResults);
 
-            SetIncrementalId(searchResults);
-            return searchResults;
+                return searchResults;
+            }
+            catch (Exception ex)
+            {
+                return new List<ISearchResult>
+                {
+                    new SearchResult
+                    {
+                        Id = 1,
+                        Title= $"Error on page {page}",
+                        Summary = ex.Message
+                    }
+                };
+            }
         }
 
         public IEnumerable<ISearchResult> SearchFull(string search, int maxResults = 100)
@@ -60,9 +73,22 @@ namespace CyberSurfer.Data.Implementations
                 }
             }
 
+            fullSearchResults = fullSearchResults.Take(maxResults).ToList();
+
             SetIncrementalId(fullSearchResults);
 
             return fullSearchResults;
+        }
+
+        public string SearchDebug(string search, int page)
+        {
+            //Build search url
+            var searchUrl = searchUrlBuilder.BuildSearchUrl(search, page);
+
+            //Get the plane Html result
+            var searchHtmlResult = searchWebClient.Search(searchUrl);
+
+            return searchHtmlResult;
         }
 
         private void SetIncrementalId(IEnumerable<ISearchResult> results)

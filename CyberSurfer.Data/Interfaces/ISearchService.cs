@@ -10,6 +10,8 @@ namespace CyberSurfer.Data.Interfaces
     public interface ISearchService
     {
         IEnumerable<ISearchResult> Search(string search, int page = 1);
-        IEnumerable<ISearchResult> SearchFull(string search, int maxResults = 100);
+        IEnumerable<ISearchResult> SearchFull(string search, int maxResults = 40);
+
+        string SearchDebug(string search, int page = 1);
     }
 }

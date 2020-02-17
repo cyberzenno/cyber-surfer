@@ -18,7 +18,7 @@ namespace CyberSurfer.Web.Models
         public IEnumerable<ISearchResult> Column3 { get; private set; }
         public IEnumerable<ISearchResult> Column4 { get; private set; }
 
-        public SearchResultsViewModel(string search, IEnumerable<ISearchResult> results, string searchProvider, int pageSize = 25)
+        public SearchResultsViewModel(string search, IEnumerable<ISearchResult> results, string searchProvider, int pageSize = 10)
         {
             Search = search;
             SearchProvider = searchProvider;
