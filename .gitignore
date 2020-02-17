@@ -251,3 +251,4 @@ paket-files/
 .idea/
 *.sln.iml
 CyberSurfer.Web/Scripts/Local
+CyberSurfer.Data/ProxyData/ProxyList.txt
